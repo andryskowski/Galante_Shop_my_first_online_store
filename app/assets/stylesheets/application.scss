@@ -20,7 +20,6 @@ $link-hover: #222;
 @import "bootstrap";
 @import "functions";
 
-
 .notification {
   border-radius: 0;
 }
@@ -29,10 +28,12 @@ $link-hover: #222;
   margin-bottom: 0;
 }
 
+.index{
+ background: black;
 .instrument-index-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-
+  
   .instrument {
     border-left: 0;
     border-top: 0;
@@ -48,6 +49,7 @@ $link-hover: #222;
       right: 10px;
     }
   }
+}
 
   .instrument-thumb {
     position: relative;

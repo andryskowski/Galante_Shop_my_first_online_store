@@ -2,19 +2,26 @@
 <section class="hero is-warning">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">
-        Browse the latest instruments on Flanger
-      </h1>
+
     </div>
   </div>
 </section>
 <% end %>
 
 <div class="instrument-index-grid pt4">
+
+  <link rel="stylesheet" type="text/css" href="carousel.scss">
+<%= render 'layouts/carousel' %>
+
+
+<p style="text-align: center;"><strong>GalantyShop</strong></p>
+<p style="text-align: center;">Jesteśmy najlepszym sklepem na tej planecie.</p>
+</div>
+
   <% @instruments.each do |instrument| %>
 
     <div class="instrument border-light">
-      <div class="instrument-thumb">
+      <center><div class="instrument-thumb"></center>
       <%= link_to image_tag(instrument.image_url(:thumb)), instrument %>
 
       <% if instrument.condition? %>
@@ -26,8 +33,8 @@
 
 
     <div class="pa3">
-
-      <h3 class="fw7 f4 title"><%= link_to instrument.title, instrument %></h3>
+       
+      <h3 class="fw7 f4 title"><%= link_to instrument.title, product_path %></h3>
 
       <p class="has-text-gray fg pt1">Sold by <%= instrument.user.name %></p>
 
