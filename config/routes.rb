@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-get 'product' => 'store#product', as: :product
+get 'product' => 'instruments#product', as: :product
   resources :line_items
   resources :carts
   resources :instruments

@@ -8,6 +8,9 @@ class InstrumentsController < ApplicationController
     @instruments = Instrument.all.order("created_at desc")
   end
 
+  def product
+  end
+  
   # GET /instruments/1
   # GET /instruments/1.json
   def show

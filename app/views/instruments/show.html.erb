@@ -1,4 +1,4 @@
-<% content_for :body_class, 'bg-light' %>
+
 
 <section class="section instrument-show">
   <div class="columns">
@@ -17,9 +17,9 @@
         <% end %>
       </ul>
 
-      <div class="feature-image">
+      <center><div class="feature-image" style="width:100%;">
         <%= image_tag(@instrument.image_url(:default)) %>
-      </div>
+      </div></center>
 
       <div class="content pa4 mt3 bg-white border-radius-3">
 
@@ -62,12 +62,8 @@
       <div class="bg-white pa4 border-radius-3">
         <h4 class="title is-5 has-text-centered"><%= number_to_currency(@instrument.price) %></h4>
         <p class="has-text-centered mb4">Sold by <%= @instrument.user.name %></p>
-        <%= button_to 'Add to cart', line_items_path(instrument_id: @instrument), class: 'button is-warning add-to-cart' %>
       </div>
     </div>
   </div>
 
-  <% if instrument_author(@instrument) %>
-    <%= link_to 'Edit', edit_instrument_path(@instrument), class: 'button' %>
-  <% end %>
 </section>
